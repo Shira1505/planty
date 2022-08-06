@@ -1,5 +1,6 @@
-import './NavBar.css';
+import './navBar.css';
 import { AppBar, Toolbar, Typography, Stack, Button, Input } from '@mui/material';
+import {Link} from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -9,13 +10,23 @@ function NavBar() {
           PLANTY
         </Typography>
         <Stack direction="row" spacing={2}>
-          <Button id="1" color="inherit">Login</Button>
-          <Button color="inherit">Signup</Button>
-          <Button color="inherit">Products</Button> 
+          <Link to="/login" color="inherit">
+              <button type="button">
+                    Login
+              </button>
+          </Link>
+          <Link to="/signup" color="inherit">
+              <button type="button">
+                    Sign Up
+              </button>
+          </Link>
+          
+
+          {/* <Button color="inherit">Products</Button> 
           <Button color="inherit">Accessories</Button> 
           <Button color="inherit">Plant Care</Button>
           <Button color="inherit">Find My Match</Button> 
-          <Button color="inherit">Cart</Button>
+          <Button color="inherit">Cart</Button> */}
         </Stack>
         <Input type="search" placeholder="Search"></Input>
       </Toolbar>
