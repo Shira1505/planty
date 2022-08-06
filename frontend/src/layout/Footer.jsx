@@ -11,7 +11,7 @@ const StyledLink = styled('a')(({
     position: 'relative',
     display: 'block',
     padding: '0.3rem 0rem',
-    color: theme.palette.grey[500],
+    color: '#04371E',
     cursor: 'pointer',
     borderRadius: 4,
     '&:hover': {
@@ -22,7 +22,7 @@ const StyledLink = styled('a')(({
 const Footer = () => {
     return (
         <footer>
-            <Box bgcolor="#000000">
+            <Box bgcolor="#748E81">
                 <Container sx={{
                     p: '1rem',
                     color: 'white'
@@ -40,8 +40,8 @@ const Footer = () => {
                                 </Box>
 
                                 <div>
-                                    {aboutLinks.map(({text, url}, ind) => (
-                                        <StyledLink href={url} key={ind}>{text}</StyledLink>
+                                    {aboutLinks.map(({text, href}, ind) => (
+                                        <StyledLink href={href} key={ind}>{text}</StyledLink>
                                     ))}
                                 </div>
                             </Grid>
@@ -49,10 +49,10 @@ const Footer = () => {
                                 <Box fontSize="25px" fontWeight="600" mb={2.5} lineHeight="1" color="white" fontFamily="Playfair Display">
                                     Contact Us
                                 </Box>
-                                <Box py={0.6} color="grey.500">
-                                    Email: <Link href="mailto:planty@gmail.com" target="_blank" sx={{color:'green'}}>planty@gmail.com</Link>
+                                <Box py={0.6} color="#04371E">
+                                    Email: <Link href="mailto:planty@gmail.com" target="_blank" sx={{color:'#04371E'}}>planty@gmail.com</Link>
                                 </Box>
-                                <Box py={0.6} color="grey.500">
+                                <Box py={0.6} color="#04371E">
                                     Phone: +972-526455123
                                 </Box>
                             </Grid>
@@ -65,11 +65,14 @@ const Footer = () => {
 };
 
 const aboutLinks = [{
-    text: 'Terms & Conditions & Privacy Policy',
-    url: '//itsjuly.com/blank'
+    text: 'Terms & Conditions',
+    href: '/terms'
+}, {
+    text: 'Refund Policy',
+    href: '/refund'
 }, {
     text: 'About Us',
-    url: '//itsjuly.com/about'
+    href: '/about'
 }];
 
 

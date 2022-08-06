@@ -8,6 +8,9 @@ import NavBar from './layout/navBar'
 import Footer from './layout/footer'
 import Login from './components/login'
 import Products from './components/products'
+import Terms from './pages/terms'
+import Refund from './pages/refundPolicy'
+import About from './pages/aboutUs'
 
 const Routing = () => {
   return(
@@ -17,6 +20,9 @@ const Routing = () => {
         <Route exact="true" path="/" element={<App/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/products" element={<Products/>} />
+        <Route path="/terms" element={<Terms/>} />
+        <Route path="/refund" element={<Refund/>} />
+        <Route path="/about" element={<About/>} />
       </Routes>
       <Footer/>
     </Router>
