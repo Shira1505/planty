@@ -6,11 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import NavBar from './layout/navBar'
 import Footer from './layout/footer'
-import Login from './components/login'
-import Products from './components/products'
+import Login from './pages/login'
+import Products from './pages/products'
 import Terms from './pages/terms'
 import Refund from './pages/refundPolicy'
 import About from './pages/aboutUs'
+import FindMatch from './pages/findMatch'
+
+
 
 const Routing = () => {
   return(
@@ -23,6 +26,10 @@ const Routing = () => {
         <Route path="/terms" element={<Terms/>} />
         <Route path="/refund" element={<Refund/>} />
         <Route path="/about" element={<About/>} />
+        <Route path="/accessories" element={<About/>} />
+        <Route path="/plant-care" element={<About/>} />
+        <Route path="/find-my-match" element={<FindMatch/>} />
+      
       </Routes>
       <Footer/>
     </Router>

@@ -14,11 +14,11 @@ import { VscAccount } from "react-icons/vsc";
 
 const pages = [
   {name: 'Login', route: "/login"},
-  {name: 'Sign up', route: "/signup"},
+  // {name: 'Sign up', route: "/signup"},
   {name: 'Products', route: "/products"},
   {name: 'Accessories', route: "/accessories"},
-  {name: 'Plant Care', route: "/plantCare"},
-  {name: 'Find My Match', route: "/findMyMatch"},
+  {name: 'Plant Care', route: "/plant-care"},
+  {name: 'Find My Match', route: "/find-my-match"},
 
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
