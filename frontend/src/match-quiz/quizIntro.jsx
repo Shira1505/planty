@@ -8,7 +8,6 @@ function QuizIntro() {
         align= 'center'
         paragraph= 'true'
         sx={{
-          mr: 2,
           fontFamily: 'monospace',
           letterSpacing: '.2rem',
           color: 'inherit',

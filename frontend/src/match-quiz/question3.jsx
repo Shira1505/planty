@@ -66,19 +66,19 @@ function Question3() {
                     control={
                       <Checkbox checked={checked[1]} onChange={handleChange1} name="1" style={{color: "#194D33"}} />
                     }
-                    label="Medium to low light."
+                    label="Medium to low light"
                     />
                     <FormControlLabel
                     control={
                       <Checkbox checked={checked[2]} onChange={handleChange2} name="2" style={{color: "#194D33"}} />
                     }
-                    label="Medium to bright light."
+                    label="Medium to bright light"
                     />
                     <FormControlLabel
                     control={
                       <Checkbox checked={checked[3]} onChange={handleChange3} name="3" style={{color: "#194D33"}} />
                     }
-                    label="No light at all."
+                    label="No light at all"
                     />
                 </FormGroup>
             </FormControl>

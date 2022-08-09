@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from '/Users/shiracohen/Desktop/planty/frontend/src/App.js';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import App from '/Users/shiracohen/Desktop/planty/frontend/src/App.js'
+import reportWebVitals from './reportWebVitals'
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from './layout/navBar'
 import Footer from './layout/footer'
 import Login from './pages/login'
@@ -12,6 +12,8 @@ import Terms from './pages/terms'
 import Refund from './pages/refundPolicy'
 import About from './pages/aboutUs'
 import FindMatch from './pages/findMatch'
+import Accessories from './pages/accessories'
+
 
 
 
@@ -26,7 +28,7 @@ const Routing = () => {
         <Route path="/terms" element={<Terms/>} />
         <Route path="/refund" element={<Refund/>} />
         <Route path="/about" element={<About/>} />
-        <Route path="/accessories" element={<About/>} />
+        <Route path="/accessories" element={<Accessories/>} />
         <Route path="/plant-care" element={<About/>} />
         <Route path="/find-my-match" element={<FindMatch/>} />
       

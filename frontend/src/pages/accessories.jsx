@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-function Products() {
+function Accessories() {
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const theme = createTheme();
@@ -34,8 +34,7 @@ const theme = createTheme();
                       Heading
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+HIII                      content.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -51,4 +50,4 @@ const theme = createTheme();
   );
 }
 
-export default Products;
+export default Accessories;

@@ -18,7 +18,19 @@ function Question2() {
         3: false,
     });
 
+    // const error = () => {
+    //     if (checked[1] || checked[2] || checked[3]) {
+    //         return true
+    //     } else {
+    //         return false
+    //     }
+    // }
+    // }
+
+    const error = true;
+
     //TODO: make nicer (not repeate 3 times...)
+
     const handleChange1 = () => {
         if (checked[1]) {
             setChecked({
@@ -43,7 +55,7 @@ function Question2() {
                 })
             }
         return
-    }
+        }
     const handleChange3 = () => {
         if (checked[3]) {
             setChecked({
@@ -60,25 +72,26 @@ function Question2() {
     return (
 
         <Box sx={{ display: 'flex' }}>
-            <FormControl sx={{ m: 3 }} component="fieldset" variant="standard" required>
+            <FormControl sx={{ m: 3 }} component="fieldset" variant="standard" required
+            error={error}>
                 <FormGroup>
                     <FormControlLabel
                     control={
                       <Checkbox checked={checked[1]} onChange={handleChange1} name="1" style={{color: "#194D33"}} />
                     }
-                    label="I’m a novice."
+                    label="I’m a novice"
                     />
                     <FormControlLabel
                     control={
                       <Checkbox checked={checked[2]} onChange={handleChange2} name="2" style={{color: "#194D33"}} />
                     }
-                    label="I’m an enthusiast and want to explore."
+                    label="I’m an enthusiast and an explorer"
                     />
                     <FormControlLabel
                     control={
                       <Checkbox checked={checked[3]} onChange={handleChange3} name="3" style={{color: "#194D33"}} />
                     }
-                    label="I’m a plant expert."
+                    label="I’m a plant expert"
                     />
                 </FormGroup>
             </FormControl>

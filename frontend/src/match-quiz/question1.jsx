@@ -8,6 +8,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 import { useState } from "react";
+import Button from '@mui/material/Button';
+
 
 
 function Question1() {
@@ -17,6 +19,11 @@ function Question1() {
         2: false,
         3: false,
     });
+    
+    // let error = undefined;
+
+    const error = !checked[1] && !checked[2] && !checked[3];
+
 
     //TODO: make nicer (not repeate 3 times...)
     const handleChange1 = () => {
@@ -57,10 +64,15 @@ function Question1() {
         return
     }
 
+    // React.useEffect(() => {
+    //      error = !checked[1] && !checked[2] && !checked[3];
+    //     console.log({error});
+    // })
+
     return (
 
-        <Box sx={{ display: 'flex' }}>
-            <FormControl sx={{ m: 3 }} component="fieldset" variant="standard" required>
+                <Box sx={{ display: 'flex' }}>
+            <FormControl sx={{ m: 3 }} component="fieldset" variant="standard" required error={ error } >
                 <FormGroup>
                     <FormControlLabel
                     control={
@@ -81,6 +93,31 @@ function Question1() {
                     label="Be more mindful"
                     />
                 </FormGroup>
+                {/* <div className="footer"> */}
+                {/* <Button 
+                    variant="contained"  
+                    style={{ background: "#194D33", marginRight: "5px" }} 
+                    disabled= { error } 
+                    // onClick= { () => {
+                    // setPage((currPage) => currPage-1);
+                    // }
+                    // }
+                >
+                    Prev
+                </Button>
+                <Button 
+                    variant="contained"  
+                    style={{ background: "#194D33" }} 
+                    // disabled= { page == quizTitles.length-1 } 
+                    // onClick= { () => {
+                    // setPage((currPage) => currPage+1);
+                    // }
+                    // }
+                >
+                    Next
+                </Button>
+                </div> */}
+                <FormHelperText>Please pick an answer</FormHelperText>
             </FormControl>
         </Box>
 
@@ -88,6 +125,4 @@ function Question1() {
 }
 
 export default Question1;
-
-
 
