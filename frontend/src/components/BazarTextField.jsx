@@ -1,5 +1,5 @@
 import { Box, TextField } from '@mui/material';
-import { Small } from './Typography';
+import { Small } from '@mui/material/Typography';
 
 const BazarTextField = ({
   label,

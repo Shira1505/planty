@@ -4,7 +4,6 @@ function Terms() {
   return (
     <Typography
     variant="subtitle1"
-    
     style={{margin: 80}}
     paragraph="true"
     sx={{

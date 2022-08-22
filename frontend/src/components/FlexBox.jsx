@@ -3,7 +3,6 @@ const FlexBox = ({
     children,
     ...props
 }) => <Box display="flex" {...props}>
-  hi
     {children}
   </Box>;
 

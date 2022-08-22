@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { Container, Box } from '@mui/material';
 import Button from '@mui/material/Button';
 import StepConnector from '@mui/material/StepConnector';
-
+// import { useEffect, useState } from 'react';
 
 
 
@@ -54,6 +54,7 @@ const titleStyle = (title, titleType) => (
 )
 
 function App() {
+
   return (
     <div>
       <img src={mainPic} alt="BigCo Inc. logo" style={{ width: '100%'}}/>

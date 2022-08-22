@@ -16,14 +16,6 @@
 // // import FacebookLoginIcon from '../components/icons/FacebookLogin';
 // // import GoogleLoginIcon from '../components/icons/GoogleLogin';
 
-// const fbStyle = {
-//     background: "#3B5998",
-//     color: "white"
-// };
-// const googleStyle = {
-//     background: "#4285F4",
-//     color: "white"
-// };
 // const StyledCard = styled(({
 //    children,
 //    passwordVisibility,
@@ -82,7 +74,7 @@
 //                     </IconButton>
 //                 }
 //             >
-//                 Incorrect Email or Password
+//                 Incorrect name or password
 //             </Alert>
 //         </Box>
 //     );
@@ -93,32 +85,34 @@
 //     const [loginFailed, setLoginFailed] = useState(false);
 
 //     const [loginData, setLoginData] = useState({
-//         email: '',
-//         password: ''
+//         user: '',
+//         pass: ''
 //     });
 
-//     // const auth = useAuth();
+//     const auth = useAuth();
 
-//     // const handleInputChange = (event) => {
-//     //     const target = event.target;
-//     //     const value = target.value;
-//     //     const name = target.name;
+//     useEffect(() => {
+//         fetch("/login").then(
+//             response => response.json()
+//         ).then(
+//             data
+//         )
+//     })
 
-//     //     let toUpdate = {
-//     //         ...loginData,
-//     //         [name]: value
-//     //     };
-//     //     setLoginData(toUpdate);
-//     // }
+//     const handleInputChange = (event) => {
+//         const target = event.target;
+//         const value = target.value;
+//         const name = target.name;
 
-//     // const handleSubmit = (event) => {
-//     //     event.preventDefault();
-//     //     auth.login(
-//     //         loginData
-//     //     ).catch(() => {
-//     //         setLoginFailed(true)
-//     //     });
-//     // }
+//         let toUpdate = {
+//             ...loginData,
+//             [name]: value
+//         };
+//         setLoginData(toUpdate);
+//     }
+
+//     const handleSubmit = (event) => {
+//     }
 
 //     // useEffect(() => {
 //     //     auth.checkLogin()
@@ -129,6 +123,7 @@
 //     // }
 
 //     return (
+
 //         <StyledCard elevation={3}>
 //             <form className="content" onSubmit={handleSubmit}>
 //                 {loginFailed && <NotifyError setLoginFailed={setLoginFailed} />}
@@ -138,15 +133,14 @@
 
 //                 <BazarTextField
 //                     mb={2}
-//                     name="email"
-//                     label="Email"
-//                     placeholder="example@mail.com"
+//                     name="user"
+//                     label="user"
+//                     placeholder="your name"
 //                     variant="outlined"
 //                     size="small"
-//                     type="email"
 //                     fullWidth
 //                     onChange={handleInputChange}
-//                     value={loginData.email}
+//                     value={loginData.user}
 //                 />
 
 //                 <BazarTextField
@@ -159,7 +153,7 @@
 //                     variant="outlined"
 //                     size="small"
 //                     fullWidth
-//                     value={loginData.password}
+//                     value={loginData.pass}
 //                     onChange={handleInputChange}
 //                 />
 
@@ -174,65 +168,6 @@
 //                 >
 //                     Submit
 //                 </BazarButton>
-
-//                 <Box mb={2}>
-//                     <Box
-//                         width="200px"
-//                         mx="auto"
-//                     >
-//                         <Divider />
-//                     </Box>
-
-//                     <FlexBox
-//                         justifyContent="center"
-//                         mt={-1.625}
-//                     >
-//                         <Box
-//                             bgcolor="background.paper"
-//                             px={2}
-//                         >
-//                             Login with your social network
-//                         </Box>
-//                     </FlexBox>
-//                 </Box>
-
-//                 {/* <BazarButton
-//                     className="facebookButton"
-//                     size="medium"
-//                     type="button"
-//                     href={"/api/oauth/facebook?language=en"}
-//                     fullWidth
-//                     sx={{
-//                         mb: "10px",
-//                         height: 44
-//                     }}
-//                 >
-//                     <FacebookLoginIcon />
-//                     <Box
-//                         fontSize="12px"
-//                         ml={1}
-//                     >
-//                         Continue with Facebook
-//                     </Box>
-//                 </BazarButton> */}
-//                 {/* <BazarButton
-//                     className="googleButton"
-//                     size="medium"
-//                     href={"/api/oauth/google?language=en"}
-//                     fullWidth
-//                     sx={{
-//                         mb: "10px",
-//                         height: 44
-//                     }}
-//                 >
-//                     <GoogleLoginIcon />
-//                     <Box
-//                         fontSize="12px"
-//                         ml={1}
-//                     >
-//                         Continue with Google
-//                     </Box>
-//                 </BazarButton> */}
 //                 <FlexBox
 //                     justifyContent="center"
 //                     alignItems="center"
@@ -259,7 +194,7 @@
 //                         flexDirection: 'column'
 //                     }}
 //                 >
-//                     <Box>Forgot or don't know your password?&nbsp;</Box>
+//                     {/* <Box>Forgot or don't know your password?&nbsp;</Box>
 //                     <Link
 //                         component={RouterLink}
 //                         to="/reset"
@@ -267,7 +202,7 @@
 //                         <h6>
 //                             Reset It
 //                         </h6>
-//                     </Link>
+//                     </Link> */}
 //                 </FlexBox>
 //             </form>
 //         </StyledCard>

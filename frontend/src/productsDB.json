@@ -1,0 +1,17 @@
+[
+        {"id":1, "productName":"Alocasia Frydek", "price":30, "quantity":3},
+        {"id":2, "productName":"Sansevieria Lauren", "price":19, "quantity":3},
+        {"id":3, "productName":"Monstera Deliciosa", "price":17, "quantity":3},
+        {"id":4, "productName":"Bird's Nest Fern", "price":17, "quantity":3},
+        {"id":5, "productName":"Sansevieria Zeylan", "price":30, "quantity":3},
+        {"id":6, "productName":"Aglaonema Marie", "price":18, "quantity":3},
+        {"id":7, "productName":"Pothos Marble Queen", "price":17, "quantity":3},
+        {"id":8, "productName":"Philodendron Mi", "price":18, "quantity":3},
+        {"id":9, "productName":"Calathea Makoyana", "price":19, "quantity":3},
+        {"id":10, "productName":"Philodendron Prince", "price":20, "quantity":3},
+        {"id":11, "productName":"Fiddle Leaf Fig", "price":17, "quantity":3},
+        {"id":12, "productName":"Philodendron Brasil", "price":16, "quantity":3},
+        {"id":13, "productName":"ZZ Plant", "price":20, "quantity":3},
+        {"id":14, "productName":"Schefflera Arbor", "price":20, "quantity":3},
+        {"id":15, "productName":"Anthurium Red", "price":16, "quantity":3}
+]
