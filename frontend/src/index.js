@@ -13,7 +13,7 @@ import Refund from './pages/refundPolicy'
 import About from './pages/aboutUs'
 import FindMatch from './pages/findMatch'
 import Accessories from './pages/accessories'
-
+import ProductDescription from './pages/product-description'
 
 
 
@@ -25,6 +25,7 @@ const Routing = () => {
         <Route exact="true" path="/" element={<App/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/products" element={<Products/>} />
+        <Route path="/products-description" element={<ProductDescription/>} />
         <Route path="/terms" element={<Terms/>} />
         <Route path="/refund" element={<Refund/>} />
         <Route path="/about" element={<About/>} />

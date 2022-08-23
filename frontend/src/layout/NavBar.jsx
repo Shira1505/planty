@@ -128,7 +128,7 @@ const NavBar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {renderNavBarLinks()}
           </Box>
-            TODO: add search and cart here 
+            TODO: add search and cart here AND LOGOUT!
             <BsCart3 />
             <VscAccount />
             <BsSearch />

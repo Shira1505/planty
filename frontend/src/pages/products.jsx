@@ -1,3 +1,4 @@
+import './products.css';
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -9,27 +10,20 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Container';
-import ProductsJson from '/Users/shiracohen/Desktop/planty/frontend/src/productsDB.json';
-import product1 from '/Users/shiracohen/Desktop/planty/frontend/src/assets/products/1.webp';
-import product2 from '/Users/shiracohen/Desktop/planty/frontend/src/assets/products/2.webp';
-
-
+import ProductsJson from '/Users/shiracohen/Desktop/planty/frontend/src/dataBases/productsDB.json';
+import { useNavigate } from 'react-router-dom';
 
 
 function Products() {
 
 const theme = createTheme();
 
-const productPic = (productId) => {
-  const pic = "product" + productId.toString();
-  return pic;
+function ViewOnClick () {
+  const navigate = useNavigate()
+  console.log("Before")
+  navigate('/products-description')
+  console.log("After")
 }
-
-const photos = [
-  "/Users/shiracohen/Desktop/planty/frontend/src/assets/products/1.webp"
-];
-
-
 
   return (
     <ThemeProvider theme={theme}>
@@ -43,11 +37,9 @@ const photos = [
                           sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                         >   
                           <CardContent sx={{ flexGrow: 1 }}>
-                            <CardMedia
-                              component="img"
-                              image={product1}
-                              style={{ height: "270px" }}
-                            ></CardMedia>
+                            <div className="img-wrapper">
+                              <img src={require("../assets/products/"+product.id.toString()+".webp")} alt="plant picture" className="hover-zoom" style={{ height: '270px' }}/>
+                            </div>
                             <Typography variant="h5" component="h6"
                               sx={{
                               mr: 2,
@@ -62,9 +54,12 @@ const photos = [
                               <br />
                               {product.price}$
                             </Typography>
-                            <Box style={{ justifyItems: "end", marginRight: "0px", paddingRight: "0px", width: "80%" }}>
-                              <Button size="small" style={{ color:"#A4D074" }}>View</Button>
-                              <Button size="small" style={{ color:"#A4D074"}}>Add to cart</Button>
+                            <Box style={{ justifyItems: "end", marginRight: "0px", paddingRight: "0px", width: "84%" }}>
+                              <Button size="small" style={{ color:"#A4D074" }} onClick={ViewOnClick}>View</Button>
+                              { product.quantity 
+                                ? <Button size="small" style={{ color:"#A4D074"}}>Add to cart</Button> 
+                                : <Button size="small" disabled="true" style={{ color:"#A4D074"}}>Out of Stock</Button> 
+                              }
                             </Box>
                           </CardContent>
                         </Card>
