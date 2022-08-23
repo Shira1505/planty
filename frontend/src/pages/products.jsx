@@ -19,7 +19,6 @@ function Products() {
 
 const theme = createTheme();
 const navigate = useNavigate();
-// const [productId, setProductId] = useState(-1);
 
   return (
     <ThemeProvider theme={theme}>
