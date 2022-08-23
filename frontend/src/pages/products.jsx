@@ -12,16 +12,14 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Container';
 import ProductsJson from '../dataBases/productsDB.json';
 import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
 
 
 function Products() {
 
 const theme = createTheme();
 const navigate = useNavigate();
-
-function ViewOnClick () {
-  navigate('/products-description', { state: { id: 7} });
-}
+// const [productId, setProductId] = useState(-1);
 
   return (
     <ThemeProvider theme={theme}>
@@ -29,6 +27,9 @@ function ViewOnClick () {
           <Grid container spacing={4}>
                 <Grid container spacing={4}>
                   {ProductsJson.map(product => {
+                    console.log("got here")
+                    // setProductId(5);
+                    // productId = product.id;
                     return (
                       <Grid item xs={12} sm={6} md={3} key={product.id}> 
                         <Card
@@ -53,7 +54,10 @@ function ViewOnClick () {
                               {product.price}$
                             </Typography>
                             <Box style={{ justifyItems: "end", marginRight: "0px", paddingRight: "0px", width: "84%" }}>
-                              <Button size="small" style={{ color:"#A4D074" }} onClick={ViewOnClick}>View</Button>
+                              <Button size="small" style={{ color:"#A4D074" }} onClick= { () => {
+                                navigate('/products-description', { state: { id: product.id, name: product.productName, price: product.price, quantity: product.quantity, description: product.description} })
+                              }
+                              }>View</Button>
                               { product.quantity 
                                 ? <Button size="small" style={{ color:"#A4D074"}}>Add to cart</Button> 
                                 : <Button size="small" disabled="true" style={{ color:"#A4D074"}}>Out of Stock</Button> 

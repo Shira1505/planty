@@ -10,45 +10,9 @@ import StepConnector from '@mui/material/StepConnector';
 import { useLocation } from 'react-router-dom';
 import ProductsJson from '../dataBases/productsDB.json';
 
-
-const paragraphStyle = (text) => (
-  <Typography
-  variant= 'subtitle1'
-  align= 'center'
-  fontSize= {21}
-  paragraph="true"
-  sx={{
-    mr: 2,
-    fontWeight: 100,
-    color: 'inherit',
-    textDecoration: 'none',
-  }}
-  >
-    {text}
-  </Typography>
-)
-
-const titleStyle = (title, titleType) => (
-  <Typography
-  variant= {titleType}
-  align= 'center'
-  style={{marginTop: 50}}
-  paragraph="true"
-  sx={{
-    mr: 2,
-    letterSpacing: '.2rem',
-    fontWeight: '700',
-    color: 'inherit',
-    textDecoration: 'none',
-  }}
-  >
-    {title}   
-  </Typography>
-)
-
 function ProductDescription() {
     const { state } = useLocation();
-    const { id } = state;
+    const { id, name, price, quantity, description } = state;
     console.log(ProductsJson[0]);
 
   return (
@@ -58,7 +22,39 @@ function ProductDescription() {
           <img src={accessoriesPic} alt="BigCo Inc. logo" style={{width: "70%", height:"100%"}}/>
         </div>
         <div style={{width: "50%", marginLeft: "30px"}} align="center">
-          {titleStyle("ACCESSORIES", "h6")}
+            <Typography
+                variant= 'h5'
+                align= 'center'
+                style={{marginTop: 50}}
+                paragraph="true"
+                sx={{
+                    mr: 2,
+                    letterSpacing: '.2rem',
+                    fontWeight: '550',
+                    color: 'inherit',
+                    textDecoration: 'none',
+                }}
+            >
+                    {name} <br />  
+                    {price}$
+            </Typography>
+
+            <Typography
+                variant= 'subtitle1'
+                align= 'center'
+                fontSize= {21}
+                paragraph="true"
+                sx={{
+                    mr: 2,
+                    width: 400,
+                    fontWeight: 100,
+                    color: 'inherit',
+                    textDecoration: 'none',
+                }}
+                >
+                    {description}
+            </Typography>
+
           {/* {paragraphStyle(accessories)} */}
           <Button variant="outlined" style={{color: "#B7FD0B", borderColor: "#B7FD0B"}} href="/accessories">SHOP ACCESSORIES</Button>
         </div>
