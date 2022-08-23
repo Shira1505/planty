@@ -1,4 +1,4 @@
-import Image from '/Users/shiracohen/Desktop/planty/frontend/src/components/BazarImage';
+import Image from '../components/BazarImage';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from '/Users/shiracohen/Desktop/planty/frontend/src/App.js'
+import App from './App.js'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from './layout/navBar'

@@ -10,19 +10,17 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Container';
-import ProductsJson from '/Users/shiracohen/Desktop/planty/frontend/src/dataBases/productsDB.json';
+import ProductsJson from '../dataBases/productsDB.json';
 import { useNavigate } from 'react-router-dom';
 
 
 function Products() {
 
 const theme = createTheme();
+const navigate = useNavigate();
 
 function ViewOnClick () {
-  const navigate = useNavigate()
-  console.log("Before")
-  navigate('/products-description')
-  console.log("After")
+  navigate('/products-description', { state: { id: 7} });
 }
 
   return (
